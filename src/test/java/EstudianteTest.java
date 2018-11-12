@@ -7,24 +7,19 @@ import java.util.List;
 import static org.junit.Assert.*;
 
 public class EstudianteTest {
-
     @Test
-    public void estudiante(){
-        Estudiante estudiante = new Estudiante("Angello", "Valdivia", 5935787, 26);
-        Materia materia1 = new Materia("Ingles", "ING1", 90);
-        Materia materia2 = new Materia("Lenguajes", "LEN2", 95);
-        Materia materia3 = new Materia("Sistemas", "SIS3", 98);
-        List<Materia> M = new ArrayList<>();
-        M.add(materia1);
-        M.add(materia2);
-        M.add(materia3);
-        System.out.println(estudiante.getMateria("ING1",M));
-        Assert.assertEquals(("ING1"+"\n"+"Ingles"+"\n"+90.0),estudiante.getMateria("ING1",M));
-        System.out.println(estudiante.getMateria("LEN2",M));
-        Assert.assertEquals(("LEN2"+"\n"+"Lenguajes"+"\n"+95.0),estudiante.getMateria("LEN2",M));
-        System.out.println(estudiante.getMateria("SIS3",M));
-        Assert.assertEquals(("SIS3"+"\n"+"Sistemas"+"\n"+98.0),estudiante.getMateria("SIS3",M));
-
+    public void estudiante (){
+        Estudiante estudiante = new Estudiante("Tania","Lopez",789878,26);
+        Materia materia1 = new Materia("Ingles","123A",55);
+        Materia materia2 = new Materia("Lenguaje","123B",98);
+        Materia materia3 = new Materia("Fisica","123C",87);
+        List<Materia> m = new ArrayList<>();
+        m.add(materia1);
+        m.add(materia2);
+        m.add(materia3);
+        System.out.println(estudiante.getMateria("123C",m));
+        Assert.assertEquals(("123C"+"\n"+"Fisica"+"\n"+87.0),estudiante.getMateria("123C",m));
     }
+
 
 }
